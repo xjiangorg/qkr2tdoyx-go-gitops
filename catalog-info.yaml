@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qkr2tdoyx-go-gitops
+  description: This is GitOps manifest for qkr2tdoyx-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: qkr2tdoyx-go
+    janus-idp.io/tekton: qkr2tdoyx-go 
+    backstage.io/kubernetes-id: qkr2tdoyx-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qkr2tdoyx-go
